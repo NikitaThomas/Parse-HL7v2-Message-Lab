@@ -1,6 +1,3 @@
-# You will need to implement two key functions in this file, parse_hl7() and
-# save_mongo(). You can implement any other helper functions you like, however
-# make sure that when this module is imported it does not execute any code.
 require(jsonlite)
 
 parse_hl7 <- function(hl7_msg) {
@@ -61,26 +58,7 @@ extract_fields <- function(hl7_msg){
 sample1<- "~/Desktop/HS_611/hs611-labs/NikitaThomas-lab-hl7-r/samples/1.txt"
 parse_hl7(sample1)
 
-# Extra Credit
-save_mongo <- function(data, db_name="encounters") {
-  # Saves the data to MongoDB at the specified port and database.
-  #
-  # If the "resourceType" of the data is HL7's "Patient" then the data should
-  # be saved to the MongoDB collection called "patients" (all lowercase). If the
-  # "resourceType" is "Observation" then the data should be saved to the
-  # "observations" collection.
-  #
-  # Args
-  # data: A JSON document containing either the patient or observations resource
-  # suitable to be saved into MongoDB.
-  # db_name: The name of the MongoDB database to save data to. DO NOT change the
-  # default value.
-  #
-  # Returns
-  # A list containing the ObjectID's of the document(s) that were saved.
-
-}
-
+#Main
 main<- function(){
   file_path<- 
   json_obj<- parse_hl7(file_path)
